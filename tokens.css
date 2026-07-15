@@ -1,0 +1,65 @@
+/* Hallmark · macrostructure: Stat-Led · genre: editorial
+ * theme: custom · vibe: "precision instrumentation, contained, mechanical-technical" · paper: oklch(98% 0.006 210) · accent: oklch(66% 0.160 62)
+ * display: JetBrains Mono · body: IBM Plex Sans · axes: light / mono / warm (amber ~62°)
+ * studied: no · context: user-provided · v1.0.0
+ */
+:root {
+  /* — color — */
+  --color-paper: #F2F8F9;
+  --color-paper-2: #E5EDEE;
+  --color-graphite: #0C1617;
+  --color-graphite-2: #162123;
+  --color-ink: #101819;
+  --color-ink-2: #464F51;
+  --color-rule: #B7C0C1;
+  --color-muted: #5C6567;
+  --color-accent: #D57700;
+  --color-focus: #DD6600;
+  --color-ink-on-graphite: #E4EDEF;
+
+  /* — type — */
+  --font-display: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* — scale (1.25 major third, 16px base) — */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-s: clamp(2rem, 3.5vw + 1rem, 3.5rem);
+
+  /* — space (4pt scale) — */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* — motion — */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
+
+  /* — misc — */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --measure: 65ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+  }
+}

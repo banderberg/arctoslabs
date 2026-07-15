@@ -1,0 +1,215 @@
+/* Hallmark · consumes tokens.css — shared components for all 5 pages */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-md);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+h1 { font-weight: 700; }
+h2 { font-weight: 700; font-size: var(--text-2xl); }
+h3 { font-weight: 500; font-size: var(--text-lg); }
+
+p { margin: 0 0 var(--space-md); max-width: var(--measure); }
+a { color: var(--color-accent); }
+a:focus-visible, button:focus-visible, details > summary:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  transition: none;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+/* — section rhythm — */
+.section { padding: var(--space-3xl) 0; border-bottom: 1px solid var(--color-rule); }
+.section:last-of-type { border-bottom: none; }
+.section--dark {
+  background: var(--color-graphite);
+  color: var(--color-ink-on-graphite);
+  border-bottom-color: var(--color-graphite-2);
+}
+.section--dark .eyebrow { color: var(--color-accent); }
+.section--dark a { color: var(--color-accent); }
+
+/* — nav (N9 edge-aligned minimal) — */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-rule);
+  flex-wrap: wrap;
+}
+.nav__wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--color-ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.nav__wordmark img { height: 1.5rem; width: auto; }
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav__links a {
+  color: var(--color-ink-2);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+.nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--color-accent); }
+
+/* — footer (Ft6 letter-close voice, graphite band) — */
+.footer {
+  background: var(--color-graphite);
+  color: var(--color-ink-on-graphite);
+  padding: var(--space-2xl) 0;
+}
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-xl);
+}
+.footer__wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink-on-graphite);
+  text-decoration: none;
+  font-size: var(--text-md);
+}
+.footer__links {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.footer__links a { color: var(--color-ink-on-graphite); font-size: var(--text-sm); text-decoration: none; }
+.footer__links a:hover { color: var(--color-accent); }
+.footer__copyright { color: var(--color-rule); font-size: var(--text-xs); width: 100%; margin-top: var(--space-lg); }
+
+/* — buttons — */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-base) var(--ease-out);
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn--primary { background: var(--color-accent); color: var(--color-graphite); }
+.btn--primary:hover { background: var(--color-focus); }
+.btn--secondary {
+  background: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+.section--dark .btn--secondary { color: var(--color-ink-on-graphite); }
+
+/* — odometer stat block (hero) — */
+.stat-block { text-align: left; }
+.stat-block__figure {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display);
+  line-height: 1;
+  color: var(--color-ink-on-graphite);
+  border-bottom: 3px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: var(--space-xs);
+}
+.stat-block__label {
+  font-size: var(--text-md);
+  color: var(--color-rule);
+  margin-top: var(--space-md);
+  max-width: 40ch;
+}
+
+/* — feature grid (2-col on tablet+, 1-col mobile) — */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-xl);
+}
+.feature-grid__icon { color: var(--color-accent); margin-bottom: var(--space-sm); }
+.feature-grid__icon svg { width: 2rem; height: 2rem; }
+
+/* — comparison table (spec-sheet style) — */
+.compare-table-wrap { overflow-x: auto; }
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  min-width: 36rem;
+}
+.compare-table th, .compare-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+  text-align: left;
+}
+.compare-table thead th {
+  background: var(--color-graphite);
+  color: var(--color-ink-on-graphite);
+  font-family: var(--font-display);
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+}
+.compare-table td:first-child, .compare-table th:first-child { font-weight: 600; }
+.compare-table .yes { color: var(--color-accent); font-weight: 700; }
+.compare-table .no { color: var(--color-muted); }
+
+/* — responsive floor — */
+@media (max-width: 480px) {
+  .nav { padding: var(--space-sm) var(--space-md); }
+  .section { padding: var(--space-2xl) 0; }
+}
