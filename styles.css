@@ -21,7 +21,7 @@ h1, h2, h3 {
   overflow-wrap: anywhere;
   min-width: 0;
 }
-h1 { font-weight: 700; }
+h1 { font-weight: 800; }
 h2 { font-weight: 700; font-size: var(--text-2xl); }
 h3 { font-weight: 500; font-size: var(--text-lg); }
 
@@ -55,7 +55,7 @@ a:focus-visible, button:focus-visible, details > summary:focus-visible {
 .section--dark {
   background: var(--color-graphite);
   color: var(--color-ink-on-graphite);
-  border-bottom-color: var(--color-graphite-2);
+  border-bottom-color: var(--color-rule-dark);
 }
 .section--dark .eyebrow { color: var(--color-accent); }
 .section--dark a { color: var(--color-accent); }
@@ -135,19 +135,19 @@ a:focus-visible, button:focus-visible, details > summary:focus-visible {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-family: var(--font-display);
   font-size: var(--text-sm);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
   transition: transform var(--dur-fast) var(--ease-out), background var(--dur-base) var(--ease-out);
   white-space: nowrap;
 }
-.btn:active { transform: translateY(1px); }
-.btn--primary { background: var(--color-accent); color: var(--color-graphite); }
-.btn--primary:hover { background: var(--color-focus); }
+.btn:active { opacity: 0.85; }
+.btn--primary { background: var(--color-accent); color: var(--color-on-accent); }
+.btn--primary:hover { opacity: 0.92; }
 .btn--secondary {
   background: transparent;
   border-color: currentColor;
@@ -159,7 +159,7 @@ a:focus-visible, button:focus-visible, details > summary:focus-visible {
 .stat-block { text-align: left; }
 .stat-block__figure {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: var(--text-display);
   line-height: 1;
   color: var(--color-ink-on-graphite);

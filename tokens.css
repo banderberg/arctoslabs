@@ -1,25 +1,27 @@
 /* Hallmark · macrostructure: Stat-Led · genre: editorial
- * theme: custom · vibe: "precision instrumentation, contained, mechanical-technical" · paper: oklch(98% 0.006 210) · accent: oklch(66% 0.160 62)
- * display: JetBrains Mono · body: IBM Plex Sans · axes: light / mono / warm (amber ~62°)
- * studied: no · context: user-provided · v1.0.0
+ * theme: app-tokens (sourced from automate-v2/DESIGN.md, not a Hallmark catalog/custom theme) · paper: #F5F4F1 · accent: #4272C4
+ * display: system-ui · body: system-ui · axes: light / system-sans / cool (blue)
+ * studied: no · context: reskinned to match the AutoMate app's own design system for site/app visual continuity · v2.0.0
  */
 :root {
-  /* — color — */
-  --color-paper: #F2F8F9;
-  --color-paper-2: #E5EDEE;
-  --color-graphite: #0C1617;
-  --color-graphite-2: #162123;
-  --color-ink: #101819;
-  --color-ink-2: #464F51;
-  --color-rule: #B7C0C1;
-  --color-muted: #5C6567;
-  --color-accent: #D57700;
-  --color-focus: #DD6600;
-  --color-ink-on-graphite: #E4EDEF;
+  /* — color (mirrors automate-v2 DESIGN.md warm-neutral palette + primary blue) — */
+  --color-paper: #F5F4F1;
+  --color-paper-2: #FEFDFB;
+  --color-graphite: #0E0E0C;
+  --color-graphite-2: #1A1917;
+  --color-ink: #1C1B18;
+  --color-ink-2: #5C5A55;
+  --color-rule: #E2E0DB;
+  --color-rule-dark: #2A2926;
+  --color-muted: #706C67;
+  --color-accent: #4272C4;
+  --color-focus: #4272C4;
+  --color-ink-on-graphite: #F5F4F1;
+  --color-on-accent: #FFFFFF;
 
-  /* — type — */
-  --font-display: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* — type (app uses system font stack only, no custom fonts) — */
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
 
   /* — scale (1.25 major third, 16px base) — */
   --text-xs: 0.64rem;
@@ -50,9 +52,11 @@
   --dur-base: 200ms;
   --dur-slow: 360ms;
 
-  /* — misc — */
-  --radius-sm: 2px;
-  --radius-md: 4px;
+  /* — misc (radii mirror app's rounded-xl/2xl button + card scale) — */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 16px rgba(28, 27, 24, 0.04);
   --measure: 65ch;
 }
 
