@@ -181,7 +181,10 @@ a:focus-visible, button:focus-visible, details > summary:focus-visible {
   gap: var(--space-xl);
 }
 .feature-grid__icon { color: var(--color-accent); margin-bottom: var(--space-sm); }
-.feature-grid__icon svg { width: 2rem; height: 2rem; }
+.feature-grid__icon svg { width: 2rem; height: 2rem; transition: transform var(--dur-base) var(--ease-out); }
+.feature-grid__item:hover .feature-grid__icon svg { transform: translateY(-2px); }
+
+.stat-block__figure-suffix { font-weight: 600; color: var(--color-ink-2); }
 
 /* — comparison table (spec-sheet style) — */
 .compare-table-wrap { overflow-x: auto; }

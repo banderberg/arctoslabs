@@ -19,6 +19,11 @@
   --color-ink-on-graphite: #F5F4F1;
   --color-on-accent: #FFFFFF;
 
+  /* — event-type colors (mirrors automate-v2 DESIGN.md: fuel/service/expense) — */
+  --color-fuel: #1A9A8F;
+  --color-service: #E8772B;
+  --color-expense: #2EAD76;
+
   /* — type (app uses system font stack only, no custom fonts) — */
   --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
